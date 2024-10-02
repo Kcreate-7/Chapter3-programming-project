@@ -1,20 +1,78 @@
 // Chapter3 programming project.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+// Kyle Bell
+// CSC221
+
+
 #include <iostream>
+#include <random>
+
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
+	std::random_device rd;
+	std::uniform_int_distribution <int> dist(1, 1000); /*using what i saw on youtube to replicate the kind of
+	                                                     simple addition problem*/
+	
+	
+	int num1, num2, answer; // Identifying my variables
+
+
+
+	num1 = dist(rd); // again, saw the methodology on youtube, wanted a max # of 1000
+
+	num2 = dist(rd);
+
+	answer = num1 + num2;
+
+
+	cout << " Hello, welcome to your your personal math tutor! \n";
+	
+		cout << "\n";
+
+
+	cout << "The first number is " << num1 << endl;
+
+		cout << "\n";
+
+	
+	cout << "Your second number is " << num2 << endl;
+
+		cout << "\n";
+
+
+	cout << "Written as " << num1 << " + " << num2 << " = ?" << endl;
+
+		cout << "\n";
+
+
+	cout << "Take your time and show your work." << endl;
+
+	cout << "Hit enter for the solution" << endl;
+
+
+	cin.get( ); // any key does not work, they have to press enter regardless
+
+		cout << "\n";
+
+		cout << "\n";
+
+	
+	cout << num1 << " + " << num2 << " = " << answer; // readout of the correct answer 
+
+		cout << "\n";
+
+		cout << "\n";
+	
+	return 0;
+
+
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
